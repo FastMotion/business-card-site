@@ -1,0 +1,31 @@
+.containerPage {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+.MainPage_text {
+
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 200px;
+
+
+}
+.title {
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    font-family:circular, "segoe ui", sans-serif ;
+    color:#f8f8f8;
+}
+.section_text {
+    font-size: 24px;
+    font-weight: 700;
+    font-family:circular, "segoe ui", sans-serif ;
+    color: #f8f8f8;
+
+}
