@@ -4,7 +4,6 @@ import photo2 from './images/photo2.jpg'
 import './style.css'
 
 class AboutMe extends  Component {
-
     render() {
         return (
             <div className="info">

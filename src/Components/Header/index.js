@@ -9,24 +9,24 @@ class Header extends Component {
     return (
       <div className="header-container">
         <div className="header-logo-container">
-          <img className="header-logo" src="images/page1.png"/>
+          <img className="header-logo" src="/images/page1.png"/>
           <div className="header-logo-label">My Pro Style</div>
         </div>
         <div className="header-navigation">
           <div className="link-container">
-            <NavLink exact to="/mainPage" className="link">MainPage</NavLink>
+            <NavLink exact to="/" className="link">MainPage</NavLink>
           </div>
           <div className="link-container">
-            <NavLink exact to="/aboutMe" className="link">AboutMe</NavLink>
+            <NavLink to="/aboutMe" className="link">AboutMe</NavLink>
           </div>
           <div className="link-container">
-            <NavLink exact to="/video" className="link">Video</NavLink>
+            <NavLink to="/gallery/videos" className="link">Video</NavLink>
           </div>
           <div className="link-container">
-            <NavLink exact to="/images" className="link">Images</NavLink>
+            <NavLink to="/gallery/images" className="link">Images</NavLink>
           </div>
           <div className="link-container">
-            <NavLink exact to="/contacts" className="link">Contacts</NavLink>
+            <NavLink to="/contacts" className="link">Contacts</NavLink>
           </div>
         </div>
       </div>

@@ -17,11 +17,13 @@ class App extends Component {
         <div className='container'>
           <Header />
           <div className='main-content'>
-                <Route path="/mainPage" render={() => <MainPage article={contents.MainPage}/>}/>
-                <Route path="/aboutMe" render={() => <AboutMe />}/>
-                <Route path="/video" render={() => <Video />}/>
-                <Route path="/images" render={() => <MyGallery />}/>
-                <Route path="/contacts" render={() => <Contacts />}/>
+            <Switch>
+                <Route exact path="/" render={() => <MainPage article={contents.MainPage}/>}/>
+                <Route path="/aboutMe" render={() => <AboutMe/>}/>
+                <Route path="/gallery/videos" render={() => <Video/>}/>
+                <Route path="/gallery/images" render={() => <MyGallery/>}/>
+                <Route path="/contacts" render={() => <Contacts/>}/>
+            </Switch>
           </div>
         </div>
       </Router>
