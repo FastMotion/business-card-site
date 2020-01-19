@@ -9,7 +9,7 @@ class Header extends Component {
     return (
       <div className="header-container">
         <div className="header-logo-container">
-          <img className="header-logo" src="images/2.jpg"/>
+          <img className="header-logo" src="images/page1.png"/>
           <div className="header-logo-label">My Pro Style</div>
         </div>
         <div className="header-navigation">
