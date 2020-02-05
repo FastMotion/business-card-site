@@ -1,29 +1,19 @@
-.video-main-container {
+.slider {
     display: flex;
-    height:100%;
-    width: 100%;
-    background: center no-repeat;
-    background-size: cover;
-    background-image: url(201751.jpg);
-    background-color: rgba(0,0,0,0.8);
-    background-blend-mode: darken;
+    height: 100%;
+    width: 1500px;
+    max-width: 100%;
 }
-.slider-container {
-    width: 840px;
-    height: 420px;
-    margin-left: 330px;
-    margin-right: 300px;
-    margin-top: 80px;
-    position: relative;
-}
-.slider-container:before {
-    content: '';
-    position: absolute;
-    top:-2px;
-    left:-2px;
-    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
-   background-size: 400%;
-    width: 100%;
-    z-index: -1;
 
+.video-item {
+    margin-left: 250px;
+
+}
+.videoWrapper {
+    max-width: 1140px;
+    width: 100%;
+}
+
+.react-slideshow-container {
+    width: 100%;
 }

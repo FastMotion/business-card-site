@@ -2,6 +2,20 @@
     height: 93%;
 }
 
+.main-content .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    max-width: 1500px;
+    background: center no-repeat;
+    background-size: cover;
+    background-image: url('./Video/201751.jpg');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
+}
+
 .container {
     height: 100%;
     width:100%;

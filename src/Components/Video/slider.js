@@ -1,10 +1,8 @@
 import React from 'react';
 import {Zoom} from 'react-slideshow-image';
-// import video1 from 'public/videos/DSC_0020.MOV';
-// import videos from 'public/videos/summer days.mp4';
-import photo from './Снимок1.PNG';
-// import photo1 from './Снимок2.PNG';
-// import photo2 from './Снимок.PNG';
+import photo from './imagesVideo/Снимок1.PNG';
+import './style.css'
+
 
 class SimpleSlider extends React.Component {
 
@@ -12,7 +10,7 @@ class SimpleSlider extends React.Component {
     duration: 500000,
     transitionDuration: 500,
     infinite: true,
-    indicators: true,
+    indicators: false,
     arrows: true,
     scale: 0.4
   };
@@ -32,6 +30,7 @@ class SimpleSlider extends React.Component {
               >
                 <source src="/videos/DSC_0020.MOV" type={'video/mp4'}/>
               </video>
+
             </div>
             <div className='videoWrapper'>
               <video
