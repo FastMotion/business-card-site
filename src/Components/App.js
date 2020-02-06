@@ -21,7 +21,7 @@ class App extends Component {
                 <Route exact path="/" render={() => <MainPage article={contents.MainPage}/>} />
                 <Route path="/aboutMe" render={() => <AboutMe/>}/>
                 <Route path="/gallery/videos" render={() => <Video/>}/>
-                <Route path="/gallery/images" render={() => <MyGallery/>}/>
+                {/*<Route path="/gallery/images" render={() => <MyGallery/>}/>*/}
                 <Route path="/contacts" render={() => <Contacts/>}/>
             </Switch>
           </div>

@@ -8,6 +8,7 @@ class MainPage extends  Component {
         super();
         this.vantaRef = React.createRef()
     }
+
     componentDidMount() {
         this.vantaEffect = Globe({
             el: this.vantaRef.current,

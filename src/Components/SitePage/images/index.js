@@ -5,32 +5,33 @@ import "./style.css"
 class MyGallery extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1
     };
     return (
-      <div>
+      <div className={'images-gallery-wrapper'}>
         <h2> Single Item</h2>
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+
+          <div className={'images-item'}>
+            <h3><img/></h3>
           </div>
-          <div>
+          <div className={'images-item'} >
             <h3>2</h3>
           </div>
-          <div>
+          <div className={'images-item'}>
             <h3>3</h3>
-          </div>
-          <div>
+          </div >
+          <div className={'images-item'}>
             <h3>4</h3>
           </div>
-          <div>
+          <div className={'images-item'}>
             <h3>5</h3>
           </div>
-          <div>
+          <div className={'images-item'}>
             <h3>6</h3>
           </div>
         </Slider>
@@ -39,4 +40,4 @@ class MyGallery extends Component {
   }
 }
 
-export default MyGallery
+// export default MyGallery
