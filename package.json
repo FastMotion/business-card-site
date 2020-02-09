@@ -18,6 +18,7 @@
     "redux": "^4.0.4",
     "slick-carousel": "^1.8.1",
     "three": "^0.110.0",
+    "vanta": "^0.5.10",
     "video-react": "^0.14.1"
   },
   "scripts": {
