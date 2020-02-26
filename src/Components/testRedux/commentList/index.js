@@ -10,11 +10,11 @@ class CommentList extends React.Component {
   render () {
      return (
       <div className='comment-container'>
-        <div> {this.getBody()}</div>
+        <div> {this.Body()}</div>
        </div>
      )
     }
-  getBody() {
+  Body() {
     const{comments} = this.props
    return(
      <ul>

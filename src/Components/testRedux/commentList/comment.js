@@ -5,9 +5,9 @@ import './styles.css'
  class Comment extends Component  {
 
     render() {
+      console.log("1",this.props)
       const {isOpen,toggleOpen}=this.props
       const text = isOpen ? 'close' : 'open'
-      console.log('--',this.props)
       return (
         <div className='commentWrapper'>
               <button onClick={toggleOpen} className='btn-comment'>
