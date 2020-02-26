@@ -10,15 +10,15 @@ class SocialNetworks extends React.Component {
   render() {
     return (
       <div className='item-container'>
-           <a className='items-body' href='https://www.instagram.com/evgeniy_gyliy'>
+           <a className='items-body' href='https://www.instagram.com/evgeniy_gyliy' target='_blank'>
               <img className='items-icon' src={image2} />
              <section className='item-text'>follow me</section>
            </a>
-        <a className='items-body' href='https://web.telegram.org/#/im?p=@evgeniy_stuntman'>
+        <a className='items-body' href='https://t.me/GrishaBurlaka' target='_blank'>
           <img className='items-icon' src={image3} />
           <section className='item-text'>write me</section>
         </a>
-        <a className='items-body' href='https://www.facebook.com/evgeniygyliy?fref=hovercard'>
+        <a className='items-body' href='https://www.facebook.com/evgeniygyliy?fref=hovercard' target='_blank'>
           <img className='items-icon' src={image4} />
           <section className='item-text'>follow me</section>
         </a>
