@@ -6,19 +6,21 @@ import './styles.css'
 
     render() {
       const {isOpen,toggleOpen}=this.props
+      const text = isOpen ? 'close' : 'open'
+      console.log('--',this.props)
       return (
         <div className='commentWrapper'>
               <button onClick={toggleOpen} className='btn-comment'>
-                {isOpen ? 'close' : 'open'}
+                {text}
                 </button>
             {this.getBody()}
         </div>
       )
     }
-
    getBody() {
      const{commentUser,isOpen} = this.props
       if(!isOpen) return null
+      if(!commentUser.text.length) return <p>No comment yet</p>
       return (
          <div>
          <h2>{commentUser.text}</h2>

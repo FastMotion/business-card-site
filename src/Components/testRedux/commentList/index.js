@@ -3,6 +3,9 @@ import Comment from './comment'
 import './styles.css'
 
 class CommentList extends React.Component {
+  static defaultProps={
+    comments:[]
+  }
 
   render () {
      return (
