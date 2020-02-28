@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import * as THREE from "three/src/Three";
 import Globe from "vanta/dist/vanta.globe.min";
+import {connect} from "react-redux";
 import './style.css'
 
 class MainPage extends Component {
@@ -31,12 +32,14 @@ class MainPage extends Component {
       <div className="containerPage" ref={this.vantaRef}>
 
         <div className="MainPage_text">
-          <h1 className="title">{article[0].title}</h1>
-          <section className="section_text">{article[0].text}</section>
+          <h1 className="title">{article.title}</h1>
+          <section className="section_text">{article.text}</section>
         </div>
       </div>
     )
   }
 }
 
-export default MainPage
+export default connect((state)=>({
+    article:state.MainPage
+}))(MainPage)

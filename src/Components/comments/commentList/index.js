@@ -1,5 +1,6 @@
 import React from 'react'
 import Comment from './comment'
+import {TransitionGroup,CSSTransition} from 'react-transition-group'
 import './styles.css'
 import {connect} from 'react-redux'
 
@@ -21,9 +22,18 @@ class CommentList extends React.Component {
     const {commentState} = this.props
 
    return(
-     <ul>
-       {commentState.map((comment) => <li key={comment.id}><Comment comment = {comment} /></li>)}
-     </ul>
+     <TransitionGroup component={'ul'} class={'comment-item'}>
+       {commentState.map((comment) =>
+         (<CSSTransition
+           key={comment.id}
+           classNames={'note'}
+           timeout={750}
+         >
+           <li >
+             <Comment comment = {comment} />
+           </li>
+         </CSSTransition>))}
+     </TransitionGroup>
     )}
   }
 

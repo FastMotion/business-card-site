@@ -1,6 +1,7 @@
 import React,{Component}  from 'react'
 import toggleOpen from '../decorators/toggleOpen'
 import './styles.css'
+import {deleteComment} from '../../AC'
 import {connect} from 'react-redux'
 
  class Comment extends Component  {
@@ -8,16 +9,23 @@ import {connect} from 'react-redux'
     render() {
       const {isOpen,toggleOpen}=this.props
       const text = isOpen ? 'close' : 'open'
-
       return (
         <div className='commentWrapper'>
               <button onClick={toggleOpen} className='btn-comment'>
-                {text}
+                <div className={'btn-text'}>{text}</div>
                 </button>
             {this.getBody()}
+            <button onClick={this.handleDelete} className={'btn-comment'} >delete me</button>
         </div>
       )
     }
+
+    handleDelete=()=> {
+      const {comment,deleteComment} = this.props
+      deleteComment(comment.id)
+      console.log('3','delete')
+    }
+
    getBody() {
      console.log('2',this.props)
      const{isOpen,comment} = this.props
@@ -32,4 +40,4 @@ import {connect} from 'react-redux'
    }
  }
 
-export default  (toggleOpen(Comment))
+export default connect(null,{ deleteComment} ) (toggleOpen(Comment))

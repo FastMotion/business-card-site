@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import Header from "./Header"
-import Contacts from "./SitePage/Contacts/index";
-import MyGallery from "./SitePage/images/index"
-import MainPage from "./SitePage/MainPage/index";
-import AboutMe from "./SitePage/AboutMe/index";
+import Header from "./header"
+import Contacts from "./sitePage/Contacts/index";
+import MyGallery from "./sitePage/images/index"
+import MainPage from "./sitePage/MainPage/index";
+import AboutMe from "./sitePage/AboutMe/index";
 import Video from "./Video/slider"
-import Commentlist from './testRedux/commentList/index'
+import Commentlist from './comments/commentList/index'
 import NotFound from "./routers/NotFound"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { contents,normalizedComments} from '../content'
+import { contents} from '../content'
 import './styles.css'
 
 
@@ -21,7 +21,7 @@ class App extends Component {
           <Header />
           <div className='main-content'>
             <Switch>
-                <Route exact path="/" render={() => <MainPage article={contents.MainPage}/>} />
+                <Route exact path="/" render={() => <MainPage />} />
                 <Route path="/aboutMe" render={() => <AboutMe/>}/>
                 <Route path="/gallery/videos" render={() => <Video/>}/>
                 {/*<Route path="/gallery/images" render={() => <MyGallery/>}/>*/}

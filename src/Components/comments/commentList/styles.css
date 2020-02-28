@@ -1,0 +1,57 @@
+.commentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 5px;
+    border-bottom: 2px solid burlywood;
+    height: 93%;
+    width: 100%;
+    max-width: 1650px;
+    font-size: 14px;
+
+
+}
+.comment-container {
+    display: flex;
+    height: 93%;
+    flex-direction: column;
+}
+.btn-comment {
+    display: inline-flex;
+    vertical-align: top;
+    font-size:13px ;
+    color: #190033;
+    font-family:inherit, 'Raleway', sans-serif;
+    font-weight: 600;
+    padding: 7px 25px;
+    margin: 3px;
+    border:0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.note-enter-active {
+    animation: note 750ms ease-in alternate-reverse;
+}
+.note-exit-active {
+    animation: note 750ms ease-in-out;
+}
+
+@keyframes note {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        opacity: 0.7;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+}
+
