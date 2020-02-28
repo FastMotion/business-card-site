@@ -8,14 +8,14 @@ import Video from "./Video/slider"
 import Commentlist from './testRedux/commentList/index'
 import NotFound from "./routers/NotFound"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { contents,normalizedComments} from '../contents'
+import { contents,normalizedComments} from '../content'
 import './styles.css'
+
 
 class App extends Component {
   render() {
 
     return (
-
       <Router >
         <div className='container'>
           <Header />
@@ -26,7 +26,7 @@ class App extends Component {
                 <Route path="/gallery/videos" render={() => <Video/>}/>
                 {/*<Route path="/gallery/images" render={() => <MyGallery/>}/>*/}
                 <Route path="/contacts" render={() => <Contacts/>}/>
-              <Route path="/CommentList" render={() => <Commentlist comments={normalizedComments} />}/>
+              <Route path="/CommentList" render={() => <Commentlist />}/>
             </Switch>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Comment from './comment'
 import './styles.css'
+import {connect} from 'react-redux'
 
 class CommentList extends React.Component {
   static defaultProps={
@@ -8,19 +9,24 @@ class CommentList extends React.Component {
   }
 
   render () {
+
      return (
       <div className='comment-container'>
-        <div> {this.Body()}</div>
+         {this.Body()}
        </div>
      )
     }
+
   Body() {
-    const{comments} = this.props
+    const {commentState} = this.props
+
    return(
      <ul>
-       {comments.map((commentUser) => <li key={commentUser.id}><Comment commentUser = {commentUser} /></li>)}
+       {commentState.map((comment) => <li key={comment.id}><Comment comment = {comment} /></li>)}
      </ul>
     )}
   }
 
-export default CommentList
+export default connect(state=> ({
+    commentState:state.comment
+}))(CommentList)

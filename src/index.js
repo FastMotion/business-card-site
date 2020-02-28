@@ -1,6 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
-import App from './Components/App'
+import Root from './Root'
 import './styles.css'
+import store from './store/index'
 
-render(<App/> ,document.getElementById('container'))
+render(<Root/> ,document.getElementById('container'))

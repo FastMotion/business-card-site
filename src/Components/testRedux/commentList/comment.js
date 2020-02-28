@@ -1,13 +1,14 @@
 import React,{Component}  from 'react'
 import toggleOpen from '../decorators/toggleOpen'
 import './styles.css'
+import {connect} from 'react-redux'
 
  class Comment extends Component  {
 
     render() {
-      console.log("1",this.props)
       const {isOpen,toggleOpen}=this.props
       const text = isOpen ? 'close' : 'open'
+
       return (
         <div className='commentWrapper'>
               <button onClick={toggleOpen} className='btn-comment'>
@@ -18,16 +19,17 @@ import './styles.css'
       )
     }
    getBody() {
-     const{commentUser,isOpen} = this.props
+     console.log('2',this.props)
+     const{isOpen,comment} = this.props
       if(!isOpen) return null
-      if(!commentUser.text.length) return <p>No comment yet</p>
+      if(!comment.text.length) return <p>No comment yet</p>
       return (
          <div>
-         <h2>{commentUser.text}</h2>
-         <h3>{commentUser.user}</h3>
+         <h2>{comment.text}</h2>
+         <h3>{comment.user}</h3>
         </div>
       )
    }
  }
 
-export default toggleOpen(Comment)
+export default  (toggleOpen(Comment))
