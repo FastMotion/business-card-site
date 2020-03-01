@@ -1,28 +1,36 @@
 import React from 'react'
 import Comment from './comment'
-import {TransitionGroup,CSSTransition} from 'react-transition-group'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import './styles.css'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 class CommentList extends React.Component {
-  static defaultProps={
-    comments:[]
+  static defaultProps = {
+    comments: []
   }
+  // state = {
+  //   comments: []
+  // }
 
-  render () {
+  // async componentDidMount() {
+  //   const response = await fetch('https://jsonplaceholder.typicode.com/comments')
+  //
+  //     const data = await response.json()
+  //     this.setState({comments: data})
+  // }
 
-     return (
+  render() {
+    return (
       <div className='comment-container'>
-         {this.Body()}
-       </div>
-     )
-    }
-
-  Body() {
+        {this.body()}
+        {/*{this.state.comments.map(comment => <div>{comment.name}</div>)}*/}
+      </div>
+    )
+  }
+  body() {
     const {commentState} = this.props
-
    return(
-     <TransitionGroup component={'ul'} class={'comment-item'}>
+     <TransitionGroup component={'ul'}>
        {commentState.map((comment) =>
          (<CSSTransition
            key={comment.id}
@@ -35,8 +43,11 @@ class CommentList extends React.Component {
          </CSSTransition>))}
      </TransitionGroup>
     )}
-  }
 
+}
 export default connect(state=> ({
     commentState:state.comment
 }))(CommentList)
+
+
+  // export default CommentList

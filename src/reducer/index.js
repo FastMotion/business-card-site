@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import comment from './comment'
-import MainPage from './MainPage'
+import mainpage from './mainpage'
 
 export default combineReducers({
   comment,
-  MainPage
+  mainpage
 })

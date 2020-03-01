@@ -2,12 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 10px;
+    margin: 5px;
     border-bottom: 2px solid burlywood;
     height: 93%;
     width: 100%;
     max-width: 1650px;
     font-size: 14px;
+    text-decoration: none;
 
 
 }
@@ -15,8 +17,12 @@
     display: flex;
     height: 93%;
     flex-direction: column;
+
 }
-.btn-comment {
+.comment-container ul li {
+    list-style-type: none;
+}
+.btn {
     display: inline-flex;
     vertical-align: top;
     font-size:13px ;
@@ -54,4 +60,41 @@
         transform: translateX(-200px);
     }
 }
+
+
+.item-exit-active {
+    animation: text 700ms ease-out forwards;
+}
+.item-enter-active {
+    animation: text 700ms ease-in alternate-reverse;
+}
+
+@keyframes text {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(800px);
+    }
+}
+
+
+.btn-text-enter-active {
+    opacity:0 ;
+}
+.btn-text-enter-done {
+    opacity:1 ;
+}
+
+.btn-text-exit-active {
+    opacity:0 ;
+}
+.btn-text-exit-done {
+    opacity:1 ;
+}
+
 

@@ -27,13 +27,12 @@ class MainPage extends Component {
 
   render() {
     const {article} = this.props;
-
+    console.log ('4',article)
     return (
       <div className="containerPage" ref={this.vantaRef}>
-
         <div className="MainPage_text">
-          <h1 className="title">{article.title}</h1>
-          <section className="section_text">{article.text}</section>
+          <h1 className="title">{article[0].user}</h1>
+          <section className="section_text">{article[0].text}</section>
         </div>
       </div>
     )
@@ -41,5 +40,5 @@ class MainPage extends Component {
 }
 
 export default connect((state)=>({
-    article:state.MainPage
+    article:state.mainpage
 }))(MainPage)
